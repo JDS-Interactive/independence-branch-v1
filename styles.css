@@ -110,3 +110,18 @@ a{color:inherit;text-decoration:none}
   padding:16px 18px;
   color:var(--muted);
 }
+.bar {
+  background: #ddd;
+  height: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.bar-fill {
+  background: #444;
+  height: 100%;
+  width: 0%;
+  transition: width 0.2s ease;
+}
+.fineprint {
+  text-indent: 20px;
+}
