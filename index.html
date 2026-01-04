@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Independence Branch — V1</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="mark">IB</div>
+      <div>
+        <div class="title">Independence Branch</div>
+        <div class="subtitle">V1 — Civic Foundations (Private by default)</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="./index.html" class="active">Questionnaire</a>
+      <a href="./verify.html">Verify</a>
+      <a href="./about.html">What this is</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <h1>Understand Your Civic Orientation — Privately and Transparently</h1>
+      <p>
+        A neutral, deterministic civic questionnaire designed for personal insight.
+        Results are generated locally in your browser. Sharing is optional.
+      </p>
+      <div class="hero-actions">
+        <button id="btnStart" class="btn primary">Begin the Questionnaire</button>
+        <a class="btn ghost" href="./verify.html">Verify a Result Image</a>
+      </div>
+      <p class="fineprint">
+        This project does not verify identity, citizenship, or representation. Results are informational only.
+      </p>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div class="row space">
+        <h2>Civic Foundations Questionnaire</h2>
+        <div class="pill">10 questions • 1–10 scale</div>
+      </div>
+
+      <p class="muted">
+        For each statement, select a value from <b>1</b> to <b>10</b>.
+        <b>1</b> = Strongly disagree, <b>5</b> = Mixed/Conditional, <b>10</b> = Strongly agree.
+      </p>
+
+      <div id="qWrap" class="qWrap"></div>
+
+      <div class="row space">
+        <button id="btnPrev" class="btn" disabled>Previous</button>
+        <div class="muted" id="progress">Question 1 of 10</div>
+        <button id="btnNext" class="btn primary">Next</button>
+      </div>
+    </section>
+
+    <section id="results" class="card hidden">
+      <div class="row space">
+        <h2>Your Civic Profile <span class="muted">(Private View)</span></h2>
+        <div class="pill">Computed locally</div>
+      </div>
+
+      <p class="muted">
+        Nothing has been stored or shared. You may optionally export a private result image or generate a share card.
+      </p>
+
+      <div class="grid2">
+        <div class="panel">
+          <h3>Your Civic Orientation</h3>
+          <div class="big" id="orientation">—</div>
+          <h4>What this means</h4>
+          <p id="meaning">—</p>
+        </div>
+
+        <div class="panel">
+          <h3>Civic Tendencies</h3>
+          <ul id="tendencies" class="list"></ul>
+          <div class="divider"></div>
+          <div class="mini">
+            <div><b>Version:</b> <span id="ver">—</span></div>
+            <div><b>Timestamp:</b> <span id="ts">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row space">
+        <button id="btnExportVault" class="btn primary">Export Private Result Image</button>
+        <button id="btnShareCard" class="btn">Generate Share Card (Optional)</button>
+        <button id="btnRestart" class="btn ghost">Start Over</button>
+      </div>
+
+      <p class="fineprint">
+        Exported images are for your personal use. Verification checks internal consistency only and does not verify identity or citizenship.
+      </p>
+
+      <div id="downloadArea" class="downloadArea"></div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>What This Is / What This Isn’t</h2>
+      <div class="grid2">
+        <div>
+          <h3>What this is</h3>
+          <ul class="list">
+            <li>A self-reflection tool for civic values</li>
+            <li>Deterministic scoring logic you can inspect</li>
+            <li>Private-by-default results generated on your device</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What this is not</h3>
+          <ul class="list">
+            <li>Not a vote or referendum</li>
+            <li>Not a political endorsement</li>
+            <li>Not identity or citizenship verification</li>
+            <li>Not representative of public opinion</li>
+          </ul>
+        </div>
+      </div>
+      <p class="muted">
+        Guiding principle: <b>Clarity before authority. Transparency before influence. Integrity before scale.</b>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <b>Transparency:</b> Questionnaire logic and verification rules are deterministic and intended to be open-source.
+      <span class="muted">V1 stores no individual answers on a server.</span>
+    </div>
+  </footer>
+
+  <script src="./pngmeta.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
