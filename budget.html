@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Budget Sandbox — Independence Branch</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="mark">IB</div>
+    <div>
+      <div class="title">Independence Branch</div>
+      <div class="subtitle">Budget Sandbox (V1)</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="./index.html">Questionnaire</a>
+    <a href="./budget.html" class="active">Budget Sandbox</a>
+    <a href="./verify.html">Verify</a>
+    <a href="./about.html">What this is</a>
+  </nav>
+</header>
+
+<main class="container">
+<section class="card">
+  <h1>Federal Budget Sandbox</h1>
+  <p class="muted">
+    Step into the role of a lawmaker. Adjust spending across major sectors and
+    see how tradeoffs affect deficits and debt.
+  </p>
+
+  <p class="fineprint">
+    This is a simplified, educational model. Numbers are rounded and illustrative.
+    This tool does not represent official federal budgets or policy recommendations.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Assumptions (V1)</h2>
+  <ul class="list">
+    <li>Total annual revenue is fixed.</li>
+    <li>Increasing one category requires cuts elsewhere or increases the deficit.</li>
+    <li>Interest costs rise as deficits grow.</li>
+  </ul>
+</section>
+
+<section class="card" id="sliders"></section>
+
+<section class="card">
+  <h2>Results</h2>
+  <div class="grid2">
+    <div>
+      <p><b>Total Spending:</b> $<span id="totalSpending"></span> T</p>
+      <p><b>Total Revenue:</b> $<span id="totalRevenue"></span> T</p>
+      <p><b>Deficit / Surplus:</b> $<span id="deficit"></span> T</p>
+    </div>
+    <div>
+      <p><b>Estimated Interest Pressure:</b></p>
+      <div class="bar">
+        <div class="bar-fill" id="interestBar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Reflection</h2>
+  <p class="muted" id="reflectionText"></p>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    Budget Sandbox V1 · Educational · Client-side only
+  </div>
+</footer>
+<p class="fineprint">Baseline values are rounded and based on recent federal budget proportions.  They are illustrative and may differ from official figures.</p>
+
+<script src="./budget.js"></script>
+</body>
+</html>
